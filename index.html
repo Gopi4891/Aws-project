@@ -3,122 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saheena N | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Gopinath's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: black;
-            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
             scroll-behavior: smooth;
         }
-
-        header {
-            background: linear-gradient(135deg, #108ccf, #088342d1);
-            color: #fff;
-            padding: 50px 0;
-            text-align: center;
+        .container {
+            padding: 50px 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1s forwards;
         }
-
-        nav {
-            background-color: #060808ec;
-            padding: 10px 20px;
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            animation: typing 3s steps(20) infinite alternate;
         }
-
-        nav ul li a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #e9f1f7;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+        @keyframes typing {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
         }
-
-        nav ul li a:hover {
-            background-color: #0fb4d9c8;
-            color: #ffffff;
-        }
-
-        .section {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        #about {
-            background: #222;
-            color: #fff;
-            padding: 60px;
-        }
-
         .btn {
-            display: inline-block;
             padding: 10px 20px;
-            font-size: 1em;
-            color: #fff;
-            background-color: #19bbe8;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            margin: 20px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: 0.3s;
+            background: #ff5733;
+            color: white;
         }
-
         .btn:hover {
-            background-color: #005bb5;
+            transform: scale(1.1);
+            background: #e64a19;
         }
-
-        footer {
-            background-color: #0e0f10;
-            color: #fff;
-            padding: 20px 0;
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            padding: 50px 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+        }
+        .card {
+            background: #222;
+            padding: 20px;
+            width: 250px;
+            margin: 15px;
+            border-radius: 10px;
             text-align: center;
+            transition: transform 0.5s;
+        }
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 1rem;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>SAHEENA N</h1>
-        <p class="tagline">WEB DEVELOPER</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Hello! I'm Saheena N, a passionate web developer with a knack for creating stunning and functional websites.</p>
-    </section>
-
-    <section id="resume" class="section">
-        <h2>Resume</h2>
-        <a href="your-resume.pdf" download class="btn">Download My Resume</a>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:saheena.n23@gmail.com">saheena.n23@gmail.com</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Saheena N. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <h1>Hi, I'm Gopinath</h1>
+        <img src="myphoto.jpg" alt="Gopinath" class="profile-img">
+        <p>Aspiring DevOps and cloud computing engineer with knowledge in CI/CD pipelines, AWS, Docker, Linux, and
+Kubernetes. Devoted to scalable infrastructure, cloud security, and automation. In search of an entry-level position
+where I can put my skills to use and grow</p>
+         <a href="RESUME 1.pdf" class="btn" download>Download Resume</a>
+        <button class="btn" onclick="scrollToProjects()">View My Work</button>
+    </div>
+     <div class="section">
+            <h2>Skills</h2>
+            <p>Docker | Kubernetes | AWS | Terraform | Jenkins | Linux | CI/CD | Python | Github | Grafana </p>
+        </div>
+    <div id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="card">AWS WEBSITE HOSTING <br>
+Proficient in deploying websites using cloud computing tools. <br>
+Expertise in AWS services,including EC2 instances,Amblify for website hosting,API gateway for API
+creation,Lambda for website functionality and DynamoDB for database management
+</div>
+        <div class="card">CONTINOUS INTEGRATION AND DEPLOYMENT <br>
+Orchestrated Comprahensive CI/CD pipelines utilizing AWS,Docker,Jenkins and Github. <br>
+Ensured seamless integration,deployment and automation within pipelines.</div>
+        <div class="card">AWS SERVERLESS WEB APPLICATION <br>
+Using AWS Lambda, API Gateway, S3, and DynamoDB, I created a serverless web application that is very
+scalable and efficient. <br>
+My college's real-time website was deployed on AWS S3 using CloudFront for better speed, security, and cost
+savings</div>    
+    </div>
+     <div class="section">
+            <h2>Contact</h2>
+            <p>Email: gopipaaru2004@gmail.com | GitHub: github.com/Gopi4891 | Linkedin: https://linkedin.com/in/gopinath-s-3ab373303</p>
+            <a href="mailto:gopi@example.com" class="btn">Get in Touch</a>
+        </div>
+    <footer>&copy; 2025 Gopinath. All rights reserved.</footer>
+    <script>
+        function scrollToProjects() {
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
