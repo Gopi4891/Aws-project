@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Gopi4891/my-devops-project.git'
+                git 'https://github.com/Gopi4891/CI-CD-Project.git'
             }
         }
         stage('Build Docker Image') {
